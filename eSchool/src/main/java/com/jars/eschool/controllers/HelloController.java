@@ -25,9 +25,9 @@ public class HelloController {
         return map;
     }   
     
-    @RequestMapping("/jsptest")
-    public String test(ModelAndView modelAndView) {
-        
-        return "test";
-  }    
+//    @RequestMapping("/jsptest")
+//    public String test(ModelAndView modelAndView) {
+//        
+//        return "test";
+//  }    
 }
