@@ -10,6 +10,7 @@
 <body>
 	<div id="wrapper">
 		<div id="header"><%@include file="header.jspf" %></div>
+		<div id="topbar"><%@include file="topbar.jspf" %></div>
 		<div id="content"><%@include file="content.jspf" %></div>
 		<div id="footer"><%@include file="footer.jspf" %></div>
 	</div>
