@@ -8,9 +8,11 @@ buildscript {
 }
 
 apply plugin: 'java'
+apply plugin: 'war'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
+apply plugin: 'jetty'
 
 jar {
     baseName = 'eschool'
@@ -25,6 +27,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
+	compile("javax.servlet:jstl:1.2")
     // tag::jetty[]
     compile("org.springframework.boot:spring-boot-starter-web") {
         exclude module: "spring-boot-starter-tomcat"
@@ -32,7 +35,9 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-jetty")
     // end::jetty[]
     // tag::actuator[]
-    compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile("org.springframework.boot:spring-boot-starter-actuator")    
+    //Required dependency for JSP
+    providedCompile("org.apache.tomcat.embed:tomcat-embed-jasper")   
     // end::actuator[]
     testCompile("junit:junit")
 }
