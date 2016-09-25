@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class HelloController {
 
-    @RequestMapping("/")
+    @RequestMapping("/hello")
     public String index() {
         return "Greetings from JARS eSchool!";
     }
