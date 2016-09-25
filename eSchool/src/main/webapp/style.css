@@ -56,7 +56,7 @@ a:hover, a:focus, a:active {
 .clear { clear:both }
 
 #header {
-	background:#ededed url('http://www.cssreset.com/site/wp-content/themes/cssreset/images/bg/bg-tile.jpg');
+	background:#982E32;
 	padding:10px;
 	-moz-box-shadow:    0px 1px 2px rgba(0,0,0,0.55);
 	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.55);
@@ -64,7 +64,7 @@ a:hover, a:focus, a:active {
 	box-shadow:         0px 1px 2px rgba(0,0,0,0.55);
 }
 #footer {
-	background:#ffab62;
+	background:#E0C6C0;
 	border-top:1px solid #ff4b02;
 	color:#333;
 	text-shadow:1px 1px 0 rgba(255,255,255,0.6);
@@ -77,7 +77,7 @@ a:hover, a:focus, a:active {
 /* --- Buttons inspired by ZURB --- */
 a.button,
 a.button:visited {
-	background: #222 url('http://www.cssreset.com/site/wp-content/themes/cssreset/images/bg/alert-overlay.png') repeat-x;
+	background: #222;
 	display: inline-block;
 	padding: 5px 10px 6px;
 	color: #fff;
