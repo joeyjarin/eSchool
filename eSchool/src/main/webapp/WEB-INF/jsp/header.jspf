@@ -1,1 +1,8 @@
-<h1>La Camelle School</h1>
+<!-- <h1>La Camelle School</h1>-->
+<a href="/">
+	<img class="img-responsive" src="/images/la_camelle_logo_100.jpg" alt="Logo">
+</a>
+<a href="/">
+	<img class="img-responsive" src="/images/la_camelle_text_75.jpg" alt="La Camelle School">
+</a>
+

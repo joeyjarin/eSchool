@@ -1,0 +1,15 @@
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">Admin</a></li>
+  <li class="dropdown">
+    <a href="#" class="dropbtn">Payments</a>
+    <div class="dropdown-content">
+      <a href="#">Cash</a>
+      <a href="#">Semi-annual</a>
+      <a href="#">Quarterly</a>
+      <a href="#">Monthly</a>
+    </div>
+  </li>
+  <li><a href="#students">Students</a></li>
+</ul>
+
