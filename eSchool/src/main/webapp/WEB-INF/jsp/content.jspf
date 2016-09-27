@@ -1,2 +1,12 @@
 <div>
+	<div id="rcorners_fill" class="right">
+		<form action="/login">
+		  <span style="margin-top:10px">Username:</span> 
+		  <input type="text" name="username"><br>
+		  <span style="margin-top:10px">Password:</span>  
+		  <input type="password" name="password"><br>
+		  <input type="submit" value="Login" style="margin-top:10px">
+		  <hr>
+		</form>	
+	</div>
 </div>
