@@ -1,4 +1,4 @@
-package com.jars.eschool.controllers;
+package com.jars.eschool.main.controller;
 
 import java.util.HashMap;
 import java.util.Map;

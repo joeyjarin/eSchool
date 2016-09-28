@@ -1,16 +1,16 @@
-package com.jars.eschool.controllers;
+package com.jars.eschool.main.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class JSPController {
+public class HomeController {
 
-  @RequestMapping("/jsptest")
-    public String test(ModelAndView modelAndView) {
+	@RequestMapping("/")
+	public String home(ModelAndView modelAndView) {
         
-        return "test";
-  }
+        return "home";
+	}
     
 }

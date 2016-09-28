@@ -39,5 +39,8 @@ dependencies {
     //Required dependency for JSP
     compile("org.apache.tomcat.embed:tomcat-embed-jasper")  
     // end::actuator[]
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("org.springframework.boot:spring-boot-starter-data-rest")
+    compile("com.h2database:h2")
     testCompile("junit:junit")
 }
