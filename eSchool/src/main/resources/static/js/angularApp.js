@@ -64,8 +64,6 @@ eSchool.controller('navigation', function($rootScope, $http, $location) {
 			authorization : "Basic "
 					+ btoa(credentials.username + ":" + credentials.password)
 		} : {};
-		
-		debugger;
 
 		$http.get('user', {
 			headers : headers
