@@ -40,6 +40,30 @@ public class Application {
 		// System.out.println(beanName);
 		// }
 	}
+
+	
+	/**
+	 * https://spring.io/guides/tutorials/spring-security-and-angular-js/
+	 */
+	@Configuration
+	@Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
+	protected static class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+		@Override
+		protected void configure(HttpSecurity http) throws Exception {
+			http
+        		.httpBasic().and()
+	        	.authorizeRequests()
+	        		.antMatchers("/index.html", "/eschool/home.html", "/eschool/login.html", "/", "/user", "/fonts/*").permitAll()
+	        		.anyRequest().authenticated().and()
+	        	.csrf()
+	        		.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
+		}
+	}
+	
+	@RequestMapping("/user")
+	public Principal user(Principal user) {
+		return user;
+	}
 	
 	/**
 	 * @param repository
@@ -75,29 +99,6 @@ public class Application {
 			user = repository.findByUserName("test");
 			log.info(user.toString());
 		};
-	}
-	
-	/**
-	 * https://spring.io/guides/tutorials/spring-security-and-angular-js/
-	 */
-	@Configuration
-	@Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
-	protected static class SecurityConfiguration extends WebSecurityConfigurerAdapter {
-		@Override
-		protected void configure(HttpSecurity http) throws Exception {
-			http
-        		.httpBasic().and()
-	        	.authorizeRequests()
-	        		.antMatchers("/index.html", "/home.html", "/eschool/login.html", "/angular", "/").permitAll()
-	        		.anyRequest().authenticated().and()
-	        	.csrf()
-	        		.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
-		}
-	}
-	
-	@RequestMapping("/user")
-	public Principal user(Principal user) {
-		return user;
 	}
 
 }

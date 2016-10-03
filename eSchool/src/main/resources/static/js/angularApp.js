@@ -26,7 +26,8 @@ eSchool.config(function($routeProvider, $httpProvider) {
 	.when('/contact', {
 		templateUrl : '/eschool/contact.html',
 		controller : 'contactController'
-	});
+	})
+	.otherwise('/');
 	
 	/*
 	 * The custom "X-Requested-With" is a conventional header sent by browser
@@ -63,6 +64,8 @@ eSchool.controller('navigation', function($rootScope, $http, $location) {
 			authorization : "Basic "
 					+ btoa(credentials.username + ":" + credentials.password)
 		} : {};
+		
+		debugger;
 
 		$http.get('user', {
 			headers : headers
