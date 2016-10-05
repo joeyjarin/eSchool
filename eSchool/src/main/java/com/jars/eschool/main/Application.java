@@ -53,7 +53,7 @@ public class Application {
 			http
         		.httpBasic().and()
 	        	.authorizeRequests()
-	        		.antMatchers("/index.html", "/eschool/home.html", "/eschool/login.html", "/", "/fonts/*").permitAll()
+	        		.antMatchers("/", "/index.html", "/eschool/login.html", "/fonts/*").permitAll()
 	        		.anyRequest().authenticated().and()
 	        	.csrf()
 	        		.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
